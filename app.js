@@ -20,7 +20,7 @@ const secondPost = {
 const thirdPost = {
     id: 3,
     type: 'audio',
-    url: '',
+    url: 'https://sound-pack.net/download/Sound_20911.mp3',
     text: 'Это пост с аудио',
     likes: 100,
     dislikes: 0,
@@ -67,8 +67,7 @@ function createPost(content) {
     cardBodyEl.appendChild(cardTextEl);
 
     const cardLikeButtonEl = document.createElement('button');
-    cardLikeButtonEl.className = 'btn btn-primary';
-    cardLikeButtonEl.style.marginRight = '5px';
+    cardLikeButtonEl.className = 'btn btn-primary mr-2';
     cardLikeButtonEl.textContent = '❤ ' + content.likes;
     cardLikeButtonEl.onclick = function () {
         content.likes = content.likes + 1;
